@@ -21,7 +21,7 @@
             <h1 class="my-4">Store</h1>
             <div class="list-group">
                 {% for category in categories %}
-                    <a href="#" class="list-group-item">{{ category }}</a>
+                    <a href="#" class="list-group-item">{{ category.name }}</a>
                 {% endfor %}
             </div>
 
@@ -57,12 +57,10 @@
                 </a>
             </div>
 
-
             <div class="row">
                 {% for product in products %}
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-
                         <a href="#">
                             <img class="card-img-top"
                                  src="{{ product.image.url }}"
@@ -82,7 +80,6 @@
                 </div>
                 {% endfor %}
             </div>
-
 
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
