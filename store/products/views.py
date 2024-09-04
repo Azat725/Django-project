@@ -1,12 +1,11 @@
 from django.shortcuts import render
-
 from products.models import ProductCategory, Product
 
 def index(request):
     context = {
         'title': 'Store',
         'sale': 'Аутлет: до -70% Собственный бренд. -20% новым покупателям.',
-        'is_sale': False,
+        'is_sale': True,
     }
     return render(request, 'products/index.html', context)
 
